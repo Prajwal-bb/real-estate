@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dream Homes Realty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Dream Homes</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#subscribe">Subscribe</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+            </ul>
+            <div class="nav-toggle"><span></span><span></span><span></span></div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 96px;">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p style="color:#555; margin-bottom: 18px;">We'd love to hear from you. Send us a message and we'll get back soon.</p>
+
+            <div class="about-container" style="align-items: flex-start;">
+                <div class="about-content" style="max-width:520px;">
+                    <h3 style="margin-bottom: 12px; color:#1558a0;">Get in touch</h3>
+                    <p style="margin-bottom: 10px;"><i class="fa fa-map-marker-alt" style="color:#2196f3; margin-right:8px;"></i> Dream Homes Realty, 221B Blue Street, Bengaluru, India</p>
+                    <p style="margin-bottom: 10px;"><i class="fa fa-phone" style="color:#2196f3; margin-right:8px;"></i> +91 98765 43210</p>
+                    <p style="margin-bottom: 18px;"><i class="fa fa-envelope" style="color:#2196f3; margin-right:8px;"></i> hello@dreamhomes.com</p>
+
+                    <form id="contact-form" style="display:flex; flex-direction:column; gap:12px; max-width: 520px;">
+                        <input type="text" placeholder="Your Name" required style="padding:13px 16px; border-radius:9px; border:1px solid #e3e3e3;">
+                        <input type="email" placeholder="Your Email" required style="padding:13px 16px; border-radius:9px; border:1px solid #e3e3e3;">
+                        <input type="text" placeholder="Subject" style="padding:13px 16px; border-radius:9px; border:1px solid #e3e3e3;">
+                        <textarea rows="5" placeholder="Your Message" required style="padding:13px 16px; border-radius:9px; border:1px solid #e3e3e3; resize:vertical;"></textarea>
+                        <button type="submit" class="cta-btn" style="align-self:flex-start;">Send Message</button>
+                        <div id="contact-success" class="subscribe-success" style="color:#1558a0;"></div>
+                    </form>
+                </div>
+                <div class="about-image" style="flex: 1 1 320px;">
+                    <img src="images/istockphoto-517241705-1024x1024.jpg" alt="Contact Dream Homes" style="max-width: 520px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">Dream Homes</div>
+                <p>Luxury Real Estate | Since 2005</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">&copy; 2025 Dream Homes Realty. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    (function(){
+        const form = document.getElementById('contact-form');
+        const success = document.getElementById('contact-success');
+        if(form){
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                success.textContent = 'Thanks! Your message has been sent (demo).';
+                setTimeout(()=> success.textContent='', 3500);
+                form.reset();
+            });
+        }
+        const navLinks = document.querySelector('.nav-links');
+        const navToggle = document.querySelector('.nav-toggle');
+        if(navToggle){
+            navToggle.addEventListener('click', ()=> navLinks.classList.toggle('open'));
+        }
+    })();
+    </script>
+</body>
+</html>

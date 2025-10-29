@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Homes Realty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Dream Homes</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+            <div class="nav-toggle"><span></span><span></span><span></span></div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero-slider">
+        <div class="slider-overlay">
+            <div class="hero-content">
+                <h1>Find Your Dream Home</h1>
+                <p>Luxury, Comfort &amp; Trust in Every Deal</p>
+                <button class="scroll-btn" data-scroll="#projects">View Projects</button>
+            </div>
+        </div>
+        <div class="slider-backgrounds">
+            <div class="slide slide-1" style="background-image: url('images/aprtment\ 2.jpg');"></div>
+            <div class="slide slide-2" style="background-image: url('images/istockphoto-517241705-1024x1024.jpg');"></div>
+            <div class="slide slide-3" style="background-image: url('images/istockphoto-577307444-1024x1024.jpg');"></div>
+            <div class="slide slide-4" style="background-image: url('images/aprtment.jpg');"></div>
+            <div class="slide slide-5" style="background-image: url('images/istockphoto-868302380-1024x1024.jpg');"></div>
+            <button class="slider-arrow left" aria-label="Previous slide"><i class="fa fa-chevron-left"></i></button>
+            <button class="slider-arrow right" aria-label="Next slide"><i class="fa fa-chevron-right"></i></button>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2>Our Projects</h2>
+            <div class="projects-filter">
+                <label for="filter-select">Filter by Type:</label>
+                <select id="filter-select">
+                    <option value="all">All</option>
+                    <option value="1BHK">1BHK</option>
+                    <option value="2BHK">2BHK</option>
+                    <option value="3BHK">3BHK</option>
+                    <option value="villa">Villa</option>
+                    <option value="luxury">Luxury Apartments</option>
+                </select>
+                <label for="filter-price" style="margin-left:18px;">Price:</label>
+                <select id="filter-price">
+                    <option value="all">All</option>
+                    <option value="lt50">Below ₹50 Lakhs</option>
+                    <option value="50to80">₹50-80 Lakhs</option>
+                    <option value="80to1cr">₹80L-1 Crore</option>
+                    <option value="gt1cr">Above 1 Crore</option>
+                </select>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Property cards rendered by HTML, JS can be used to filter -->
+                <div class="property-card" data-type="1BHK">
+                    <img src="images/istockphoto-1436217023-1024x1024.jpg" alt="1BHK Apartment">
+                    <h3>Cozy 1BHK Apartment</h3>
+                    <p class="location"><i class="fa fa-map-marker-alt"></i> Downtown City</p>
+                    <p class="price">₹40 Lakhs</p>
+                    <p class="desc">Perfect starter home, centrally located with modern amenities.</p>
+                    <a class="details-btn" href="project-details.html?id=1">View Details</a>
+                </div>
+                <div class="property-card" data-type="2BHK">
+                    <img src="images/istockphoto-517241705-1024x1024.jpg" alt="2BHK Lakeview">
+                    <h3>Lakeview 2BHK Apartment</h3>
+                    <p class="location"><i class="fa fa-map-marker-alt"></i> Lakeside Heights</p>
+                    <p class="price">₹55 Lakhs</p>
+                    <p class="desc">Peaceful 2BHK with water views, close to recreation and green walks.</p>
+                    <a class="details-btn" href="project-details.html?id=6">View Details</a>
+                </div>
+                <div class="property-card" data-type="3BHK luxury">
+                    <img src="images/aprtment.jpg" alt="Elite 3BHK Luxury">
+                    <h3>Elite 3BHK Luxury Home</h3>
+                    <p class="location"><i class="fa fa-map-marker-alt"></i> Garden City</p>
+                    <p class="price">₹1.2 Crore</p>
+                    <p class="desc">Spacious luxury home with rooftop terrace and private parking.</p>
+                    <a class="details-btn" href="project-details.html?id=7">View Details</a>
+                </div>
+                <div class="property-card" data-type="villa">
+                    <img src="images/istockphoto-590039462-1024x1024.jpg" alt="4BHK Villa">
+                    <h3>Modern 4BHK Villa</h3>
+                    <p class="location"><i class="fa fa-map-marker-alt"></i> Sun Valley</p>
+                    <p class="price">₹2.7 Crore</p>
+                    <p class="desc">Ultra-modern villa with garden, pool, and smart security features.</p>
+                    <a class="details-btn" href="project-details.html?id=8">View Details</a>
+                </div>
+                <div class="property-card" data-type="luxury">
+                    <img src="images/aprtment 2.jpg" alt="Luxury Apartments">
+                    <h3>Premium Luxury Apartments</h3>
+                    <p class="location"><i class="fa fa-map-marker-alt"></i> City Center</p>
+                    <p class="price">₹1.5 Crore</p>
+                    <p class="desc">Sky-high living with concierge services and sky garden.</p>
+                    <a class="details-btn" href="project-details.html?id=5">View Details</a>
+                </div>
+                <div class="property-card" data-type="1BHK">
+                    <img src="images/istockphoto-1436217023-1024x1024.jpg" alt="Budget 1BHK">
+                    <h3>Smart Budget 1BHK</h3>
+                    <p class="location"><i class="fa fa-map-marker-alt"></i> Tech Park Road</p>
+                    <p class="price">₹35 Lakhs</p>
+                    <p class="desc">Compact, efficient layout near workplaces and metro connectivity.</p>
+                    <a class="details-btn" href="project-details.html?id=9">View Details</a>
+                </div>
+                <div class="property-card" data-type="3BHK">
+                    <img src="images/istockphoto-577307444-1024x1024.jpg" alt="3BHK Family Home">
+                    <h3>3BHK Family Retreat</h3>
+                    <p class="location"><i class="fa fa-map-marker-alt"></i> Greenfield Enclave</p>
+                    <p class="price">₹85 Lakhs</p>
+                    <p class="desc">Bright interiors, kids play area, and landscaped community parks.</p>
+                    <a class="details-btn" href="project-details.html?id=10">View Details</a>
+                </div>
+                <div class="property-card" data-type="luxury penthouse">
+                    <img src="images/aprtment.jpg" alt="Skyline Penthouse">
+                    <h3>Skyline Penthouse</h3>
+                    <p class="location"><i class="fa fa-map-marker-alt"></i> Skyline District</p>
+                    <p class="price">₹3.2 Crore</p>
+                    <p class="desc">Top-floor penthouse with panoramic views and private sky deck.</p>
+                    <a class="details-btn" href="project-details.html?id=11">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-card active">
+                    <img src="images/persons/beard-1845166_1280.jpg" alt="Customer 1">
+                    <p class="testimonial-text">"Dream Homes made our buying process effortless and truly enjoyable. Highly recommended!"</p>
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">Amit P.</span>
+                        <span class="testimonial-location">Mumbai</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/persons/hooded-1171625_1280.jpg" alt="Customer 2">
+                    <p class="testimonial-text">"Professional, transparent, and trustworthy service from start to finish."</p>
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">Sneha R.</span>
+                        <span class="testimonial-location">Bangalore</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/persons/istockphoto-1434212178-1024x1024.jpg" alt="Customer 3">
+                    <p class="testimonial-text">"Outstanding experience and incredible attention to detail throughout!"</p>
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">Rahul S.</span>
+                        <span class="testimonial-location">Delhi</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/persons/woman-3169726_1280.jpg" alt="Customer 4">
+                    <p class="testimonial-text">"The best real estate team we have ever worked with. Thank you!"</p>
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">Priya D.</span>
+                        <span class="testimonial-location">Pune</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Subscription Section -->
+    <section id="subscribe" class="section subscribe-section">
+        <div class="container subscribe-container">
+            <h2>Get Updates on New Properties</h2>
+            <div class="subscription-plans">
+                <div class="plan-card">
+                  <h3>Free</h3>
+                  <p>Browse listings and get weekly updates.</p>
+                  <ul class="plan-points">
+                    <li>Access to basic listings</li>
+                    <li>Email newsletter updates</li>
+                    <li>Save 3 favorite properties</li>
+                  </ul>
+                  <span class="plan-price">₹0/month</span>
+                  <button class="plan-subscribe-btn" data-plan="free">Subscribe</button>
+                </div>
+                <div class="plan-card popular">
+                  <span class="plan-badge">Most Popular</span>
+                  <h3>Premium</h3>
+                  <p>All Free features plus property alerts, early listings access, and exclusive deals.</p>
+                  <ul class="plan-points">
+                    <li>Priority property alerts</li>
+                    <li>View new properties 48h early</li>
+                    <li>Unlimited property saves</li>
+                  </ul>
+                  <span class="plan-price">₹499/month</span>
+                  <button class="plan-subscribe-btn" data-plan="premium">Subscribe</button>
+                </div>
+                <div class="plan-card">
+                  <h3>Business</h3>
+                  <p>For property agents or businesses: unlimited listings, analytics, lead management, phone support.</p>
+                  <ul class="plan-points">
+                    <li>Unlimited property listings</li>
+                    <li>Advanced analytics dashboard</li>
+                    <li>Dedicated manager & phone support</li>
+                  </ul>
+                  <span class="plan-price">₹1899/month</span>
+                  <button class="plan-subscribe-btn" data-plan="business">Subscribe</button>
+                </div>
+            </div>
+            <form id="subscribe-form">
+                <input type="text" id="subscriber-name" placeholder="Your Name" required>
+                <input type="email" id="subscriber-email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div id="subscribe-success" class="subscribe-success"></div>
+        </div>
+        <!-- Payment Modal (hidden by default, visible on plan subscribe click) -->
+        <div id="payment-modal" class="payment-modal">
+            <div class="payment-modal-content">
+                <button class="payment-modal-close" id="payment-modal-close" aria-label="Close Payment">&times;</button>
+                <h2>Subscription Payment</h2>
+                <p id="selected-plan-info">You selected: <b></b></p>
+                <form id="payment-form">
+                    <input type="text" placeholder="Name on Card" required>
+                    <input type="text" placeholder="Card Number" maxlength="19" required>
+                    <input type="text" placeholder="MM/YY" maxlength="5" required>
+                    <input type="text" placeholder="CVV" maxlength="4" required>
+                    <button type="submit">Pay & Subscribe</button>
+                </form>
+                <div id="payment-success" class="subscribe-success"></div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section -->
+    <section id="about" class="section about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <h2>About Dream Homes Realty</h2>
+                <p>
+                    With over 20 years of experience, Dream Homes Realty has been guiding families and individuals toward their dream homes.
+                Our team believes that finding the right home is more than just a transaction — it’s about building trust and lasting relationships.
+                We are committed to delivering every project with honesty, transparency, and personalized attention.
+                From modern apartments to luxury villas, we help you find a space that truly feels like home.
+                At Dream Homes Realty, your satisfaction is the foundation of everything we do.
+                </p>
+                <br>
+                <a class="cta-btn" href="contact.html">Contact Us</a>
+            </div>
+            <div class="about-image">
+                <img src="images/about us/business-3362081_1280.jpg" alt="About Dream Homes Realty">
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">Dream Homes</div>
+                <p>Luxury Real Estate | Since 2005</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">&copy; 2025 Dream Homes Realty. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
